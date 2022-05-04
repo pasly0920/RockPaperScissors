@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom/client';
 import GlobalStyle from './styles/global';
 import './index.css';
 import App from './App';
+import styled from 'styled-components';
+
+const RootContainer = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,6 +20,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <RootContainer>
+      <App />
+    </RootContainer>
   </React.StrictMode>
 );
