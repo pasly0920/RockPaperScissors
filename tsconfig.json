@@ -17,6 +17,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "craco.config.js"],
+  "include": ["src", "craco.config.js", "src/custom.d.ts"],
   "exclude": ["node_modules", "**/node_modules/*"]
 }
