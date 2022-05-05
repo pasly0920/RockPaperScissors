@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src", ".eslintrc.js", "craco.config.js"]
+}
