@@ -12,11 +12,12 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "typeRoots": ["./types", "./node_modules/@types"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "craco.config.js", "src/custom.d.ts"],
+  "include": ["src", "craco.config.js"],
   "exclude": ["node_modules", "**/node_modules/*"]
 }
