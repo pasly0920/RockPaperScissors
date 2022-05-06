@@ -6,7 +6,8 @@
       "@assets/*": ["src/assets/*"],
       "@Page/*": ["src/Page/*"],
       "@Routes/*": ["src/Routes/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@utils/*" : ["src/utils/*"]
     }
   }
 }
