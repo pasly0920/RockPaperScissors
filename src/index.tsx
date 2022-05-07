@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import styled from 'styled-components';
+
 import GlobalStyle from '@styles/global';
 import './index.css';
 import App from './App';
-import styled from 'styled-components';
 
 const RootContainer = styled.div`
   width: 80%;
