@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { RPSPage, RPSLSPage } from '../Page';
+import { GamePage } from '../Page';
 
 const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<RPSPage />} />
-        <Route path='/additional' element={<RPSLSPage />} />
+        <Route path='/' element={<GamePage />} />
       </Routes>
     </BrowserRouter>
   );

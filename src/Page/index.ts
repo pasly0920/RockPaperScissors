@@ -1,2 +1,1 @@
-export { default as RPSPage } from './RPSPage';
-export { default as RPSLSPage } from './RPSLSPage';
+export { default as GamePage } from './GamePage';
