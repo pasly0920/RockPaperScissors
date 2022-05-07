@@ -10,15 +10,16 @@ import { GameMode } from '@utils/constants';
 
 interface Props {
   gameMode: number;
+  gameScore: number;
 }
 
-const ScoreBoard: React.FC<Props> = ({ gameMode }) => {
+const ScoreBoard: React.FC<Props> = ({ gameMode, gameScore }) => {
   return (
     <ScoreContainer>
       {gameMode === GameMode.RPS ? <StyledLogo /> : <StyledSpecialLogo />}
       <Score>
         <ScoreHeader>SCORE</ScoreHeader>
-        <ScoreText>12</ScoreText>
+        <ScoreText>{gameScore}</ScoreText>
       </Score>
     </ScoreContainer>
   );
