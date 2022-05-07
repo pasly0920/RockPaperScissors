@@ -20,3 +20,12 @@ svg에 대한 타입을 설정해주면 됨.
 ## 3. margin 및 font size 설정 관련
 
 html font size를 vw + px로 정하고 rem 단위로 margin 설정하기
+
+```css
+html{
+   font-size: calc(0.35vw + 8.74px);
+    //시스템 폰트 사이즈는 10px로 지정
+    //360 first로 작업할 때 margin,padding,border등은 1rem이 10px로 계산되고,
+      viewport사이즈에 따라 변동된다. (1280px일때 13.22px)
+}
+```
