@@ -33,4 +33,9 @@ enum FontSize {
   TINY = '0.8rem',
 }
 
-export { ColorCode, GamePickCode, FontSize };
+enum GameMode {
+  'RPS' = 0,
+  'RPSLS' = 1,
+}
+
+export { ColorCode, GamePickCode, FontSize, GameMode };
