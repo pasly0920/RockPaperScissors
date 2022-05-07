@@ -16,3 +16,7 @@ declare module '*.svg';
 
 svg에 대한 타입을 설정해주면 됨.
 추가 공부할 것 : 써드파티 라이브러리 타입 정의 방법
+
+## 3. margin 및 font size 설정 관련
+
+html font size를 vw + px로 정하고 rem 단위로 margin 설정하기
