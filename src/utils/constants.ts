@@ -14,6 +14,7 @@ enum ColorCode {
   CYAN2 = 'hsl(189, 58%, 57%)',
   BACKGROUND1 = 'hsl(214, 47%, 23%)',
   BACKGROUND2 = 'hsl(237, 49%, 15%)',
+  WHITE = 'hsl(0, 0%, 100%)',
 }
 
 enum GamePickCode {
@@ -26,7 +27,7 @@ enum GamePickCode {
 }
 
 enum FontSize {
-  LARGE = '1.5rem',
+  LARGE = '3.5rem',
   MEDIUM = '1rem',
   SMALL = '0.9rem',
   TINY = '0.8rem',
