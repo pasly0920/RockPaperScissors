@@ -47,8 +47,10 @@ export const ScoreText = styled.span`
 
 export const StyledLogo = styled(LogoIcon)`
   margin-left: 3%;
+  cursor: pointer;
 `;
 
 export const StyledSpecialLogo = styled(SpecialLogoIcon)`
   margin-left: 3%;
+  cursor: pointer;
 `;
