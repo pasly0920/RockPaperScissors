@@ -14,6 +14,7 @@ const RockPaperScissors = styled.div`
 const Game: React.FC = () => {
   const [gameMode, setGameMode] = useState<number>(GameMode.RPS);
   const [userPick, setUserpick] = useState<number>(GamePickCode.DEFAULT);
+  const [housePick, setHousePick] = useState<number>(GamePickCode.DEFAULT);
   const [RPSScore, setRPSScore] = useState<number>(0);
   const [RPSLSScore, setRPSLSScore] = useState<number>(0);
 
@@ -31,7 +32,7 @@ const Game: React.FC = () => {
         setGameMode={handleGameMode}
       />
       {userPick === GamePickCode.DEFAULT ? (
-        <GamePick gameMode={gameMode} />
+        <GamePick gameMode={gameMode} setUserPick={setUserpick} />
       ) : (
         <GameResult />
       )}
