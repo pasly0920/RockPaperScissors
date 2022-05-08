@@ -11,7 +11,7 @@ import { GameMode } from '@utils/constants';
 interface Props {
   gameMode: number;
   gameScore: number;
-  setGameMode: () => void;
+  setGameMode: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const ScoreBoard: React.FC<Props> = ({ gameMode, gameScore, setGameMode }) => {
