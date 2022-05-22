@@ -23,8 +23,8 @@ const GamePick: React.FC<Props> = ({ gameMode, setUserPick }) => {
     gameMode === GameMode.RPS ? RPSGameSelect : RPSLSGameSelect;
   return (
     <GamePickContainer>
-      {GameSelect.map((pick) => (
-        <PickBox pick={pick} />
+      {GameSelect.map((pick, idx) => (
+        <PickBox pick={pick} setUserPick={setUserPick} key={idx} />
       ))}
     </GamePickContainer>
   );
