@@ -1,4 +1,4 @@
-import { GamePickContainer, StyledBgTrinangle } from './style';
+import { GamePickContainer } from './style';
 import PickBox from '@Component/Game/GamePick/PickBox';
 import { GameMode, GamePickCode } from '@utils/constants';
 
