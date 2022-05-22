@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { ReactComponent as BackgroundTriangle } from '@assets/images/bg-triangle.svg';
-
 export const GamePickContainer = styled.div`
   margin-top: 3%;
   width: 100%;
@@ -16,8 +14,4 @@ export const GamePickContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center 100%;
   background-size: 50% 80%;
-`;
-
-export const StyledBgTrinangle = styled(BackgroundTriangle)`
-  width: 100%;
 `;
