@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
 import { ReactComponent as BackgroundTriangle } from '@assets/images/bg-triangle.svg';
-import { ReactComponent as Rock } from '@assets/images/icon-rock.svg';
-import { ReactComponent as Paper } from '@assets/images/icon-paper.svg';
-import { ReactComponent as Scissors } from '@assets/images/icon-scissors.svg';
-import { ReactComponent as Lizard } from '@assets/images/icon-lizard.svg';
-import { ReactComponent as Spock } from '@assets/images/icon-spock.svg';
-import { ColorCode } from '@utils/constants';
 
 export const GamePickContainer = styled.div`
   margin-top: 3%;
@@ -18,7 +12,10 @@ export const GamePickContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10%;
-  background-image: url('../../../assets/images/bg-triangle.svg');
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='305' height='277'%3E%3Cpath fill='none' stroke='%23000' stroke-width='15' d='M291.5 7.5H4.574c3.119 0 52.416 84.667 147.892 254L291.5 7.5z' opacity='.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: 50% 80%;
 `;
 
 export const StyledBgTrinangle = styled(BackgroundTriangle)`
