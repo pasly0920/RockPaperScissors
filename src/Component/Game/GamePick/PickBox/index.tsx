@@ -7,7 +7,11 @@ interface Props {
 }
 
 const PickBox: React.FC<Props> = ({ pick, setUserPick }) => {
-  return <Pick>{useGetPickSvg(pick)}</Pick>;
+  const userPickHandler = () => {
+    setUserPick(pick);
+  };
+
+  return <Pick onClick={userPickHandler}>{useGetPickSvg(pick)}</Pick>;
 };
 
 export default PickBox;
