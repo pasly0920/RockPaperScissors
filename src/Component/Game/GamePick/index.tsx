@@ -1,5 +1,5 @@
 import { GamePickContainer } from './style';
-import PickBox from '@Component/Game/GamePick/PickBox';
+import PickBox from '@Component/Game/PickBox';
 import { GameMode, GamePickCode } from '@utils/constants';
 
 interface Props {
