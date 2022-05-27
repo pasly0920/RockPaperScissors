@@ -19,22 +19,30 @@ const Game: React.FC = () => {
   const [RPSScore, setRPSScore] = useState<number>(0);
   const [RPSLSScore, setRPSLSScore] = useState<number>(0);
 
+  const resetPick = () => {
+    setUserPick(GamePickCode.DEFAULT);
+    setHousePick(GamePickCode.DEFAULT);
+  };
+
   const handleGameMode = () => {
     gameMode === GameMode.RPS
       ? setGameMode(GameMode.RPSLS)
       : setGameMode(GameMode.RPS);
-  };
-
-  const resetUserPick = () => {
-    setUserPick(GamePickCode.DEFAULT);
+    resetPick();
   };
 
   useEffect(() => {
-    if (userPick !== GamePickCode.DEFAULT) {
-      const randomNumber = getRandomInt(GamePickCode.ROCK, GamePickCode.SPOCK);
+    if (
+      userPick !== GamePickCode.DEFAULT &&
+      housePick === GamePickCode.DEFAULT
+    ) {
+      const randomNumber =
+        gameMode === GameMode.RPS
+          ? getRandomInt(GamePickCode.ROCK, GamePickCode.SCISSOR)
+          : getRandomInt(GamePickCode.ROCK, GamePickCode.SPOCK);
       setHousePick(randomNumber);
     }
-  }, [userPick]);
+  }, [gameMode, housePick, userPick]);
 
   return (
     <RockPaperScissors>
@@ -49,7 +57,7 @@ const Game: React.FC = () => {
         <GameResult
           userPick={userPick}
           housePick={housePick}
-          resetUserPick={resetUserPick}
+          resetPick={resetPick}
           setRPSScore={setRPSScore}
           setRPSLSScore={setRPSLSScore}
         />
