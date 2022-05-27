@@ -11,7 +11,11 @@ const PickBox: React.FC<Props> = ({ pick, setUserPick }) => {
     setUserPick !== null && setUserPick(pick);
   };
 
-  return <Pick onClick={userPickHandler}>{useGetPickSvg(pick)}</Pick>;
+  return (
+    <Pick onClick={userPickHandler} pick={pick}>
+      {useGetPickSvg(pick)}
+    </Pick>
+  );
 };
 
 export default PickBox;
