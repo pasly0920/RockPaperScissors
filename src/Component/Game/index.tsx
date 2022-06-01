@@ -47,9 +47,8 @@ const Game: React.FC = () => {
         : setRPSLSScore((prev) => prev + result);
     };
 
-    if (userPick !== GamePickCode.DEFAULT) {
+    if (userPick !== GamePickCode.DEFAULT)
       housePick === GamePickCode.DEFAULT ? getRandomGameMode() : setScore();
-    }
   }, [gameMode, housePick, userPick]);
 
   return (
