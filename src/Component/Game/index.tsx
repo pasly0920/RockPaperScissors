@@ -6,6 +6,7 @@ import GamePick from '@Component/Game/GamePick';
 import ScoreBoard from '@Component/Game/ScoreBoard';
 import { GamePickCode, GameMode } from '@utils/constants';
 import getRandomInt from '@utils/getRandomInt';
+import getResult from '@utils/getResult';
 
 const RockPaperScissors = styled.div`
   width: 70%;
@@ -32,15 +33,22 @@ const Game: React.FC = () => {
   };
 
   useEffect(() => {
-    if (
-      userPick !== GamePickCode.DEFAULT &&
-      housePick === GamePickCode.DEFAULT
-    ) {
-      const randomNumber =
+    const getRandomGameMode = () => {
+      const randomGameMode =
         gameMode === GameMode.RPS
           ? getRandomInt(GamePickCode.ROCK, GamePickCode.SCISSOR)
           : getRandomInt(GamePickCode.ROCK, GamePickCode.SPOCK);
-      setHousePick(randomNumber);
+      setHousePick(randomGameMode);
+    };
+    const setScore = () => {
+      const result = getResult(userPick, housePick, gameMode);
+      gameMode === GameMode.RPS
+        ? setRPSScore((prev) => prev + result)
+        : setRPSLSScore((prev) => prev + result);
+    };
+
+    if (userPick !== GamePickCode.DEFAULT) {
+      housePick === GamePickCode.DEFAULT ? getRandomGameMode() : setScore();
     }
   }, [gameMode, housePick, userPick]);
 
@@ -58,8 +66,6 @@ const Game: React.FC = () => {
           userPick={userPick}
           housePick={housePick}
           resetPick={resetPick}
-          setRPSScore={setRPSScore}
-          setRPSLSScore={setRPSLSScore}
         />
       )}
     </RockPaperScissors>
