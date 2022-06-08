@@ -38,4 +38,11 @@ enum GameMode {
   'RPSLS' = 1,
 }
 
-export { ColorCode, GamePickCode, FontSize, GameMode };
+enum GameResult {
+  'DEFAULT' = -2,
+  'LOSE' = -1,
+  'DRAW' = 0,
+  'WIN' = 1,
+}
+
+export { ColorCode, GamePickCode, FontSize, GameMode, GameResult };

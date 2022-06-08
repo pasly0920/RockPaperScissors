@@ -1,4 +1,4 @@
-import { GameMode, GamePickCode } from './constants';
+import { GameMode, GamePickCode, GameResult } from './constants';
 
 const getResult = (
   userPick: number,
@@ -9,86 +9,86 @@ const getResult = (
     if (userPick === GamePickCode.ROCK) {
       switch (housePick) {
         case GamePickCode.ROCK:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.PAPER:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.SCISSOR:
-          return 1;
+          return GameResult.WIN;
       }
     } else if (userPick === GamePickCode.PAPER) {
       switch (housePick) {
         case GamePickCode.ROCK:
-          return 1;
+          return GameResult.WIN;
         case GamePickCode.PAPER:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.SCISSOR:
-          return -1;
+          return GameResult.LOSE;
       }
     } else if (userPick === GamePickCode.SCISSOR) {
       switch (housePick) {
         case GamePickCode.ROCK:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.PAPER:
-          return 1;
+          return GameResult.WIN;
         case GamePickCode.SCISSOR:
-          return 0;
+          return GameResult.DRAW;
       }
     }
   } else {
     if (userPick === GamePickCode.ROCK) {
       switch (housePick) {
         case GamePickCode.ROCK:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.PAPER:
         case GamePickCode.SPOCK:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.SCISSOR:
         case GamePickCode.LIZARD:
-          return 1;
+          return GameResult.WIN;
       }
     } else if (userPick === GamePickCode.PAPER) {
       switch (housePick) {
         case GamePickCode.PAPER:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.SCISSOR:
         case GamePickCode.LIZARD:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.ROCK:
         case GamePickCode.SPOCK:
-          return 1;
+          return GameResult.WIN;
       }
     } else if (userPick === GamePickCode.SCISSOR) {
       switch (housePick) {
         case GamePickCode.SCISSOR:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.ROCK:
         case GamePickCode.SPOCK:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.PAPER:
         case GamePickCode.LIZARD:
-          return 1;
+          return GameResult.WIN;
       }
     } else if (userPick === GamePickCode.LIZARD) {
       switch (housePick) {
         case GamePickCode.LIZARD:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.SCISSOR:
         case GamePickCode.ROCK:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.PAPER:
         case GamePickCode.SPOCK:
-          return 1;
+          return GameResult.WIN;
       }
     } else {
       switch (housePick) {
         case GamePickCode.SPOCK:
-          return 0;
+          return GameResult.DRAW;
         case GamePickCode.PAPER:
         case GamePickCode.LIZARD:
-          return -1;
+          return GameResult.LOSE;
         case GamePickCode.ROCK:
         case GamePickCode.SCISSOR:
-          return 1;
+          return GameResult.WIN;
       }
     }
   }
