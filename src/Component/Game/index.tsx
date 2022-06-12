@@ -64,6 +64,7 @@ const Game: React.FC = () => {
         <GameResult
           userPick={userPick}
           housePick={housePick}
+          gameMode={gameMode}
           resetPick={resetPick}
         />
       )}
