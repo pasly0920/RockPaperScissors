@@ -24,12 +24,12 @@ const GameResult: React.FC<Props> = ({
 
   useEffect(() => {
     setResult(getResult(userPick, housePick, gameMode));
-  }, []);
+  }, [userPick, housePick, gameMode]);
 
   return (
     <GameResultContainer>
       <PickBox pick={userPick} setUserPick={null} />
-      {result === GameResultCode.DEFAULT ? '' : <Result result={result} />}
+      {result === GameResultCode.DEFAULT ? '' : <Result result={result} resetPick={resetPick}/>}
       <PickBox pick={housePick} setUserPick={null} />
     </GameResultContainer>
   );
