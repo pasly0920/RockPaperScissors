@@ -1,6 +1,6 @@
-import { GamePickContainer } from './style';
-import PickBox from '@Component/Game/PickBox';
-import { GameMode, GamePickCode } from '@utils/constants';
+import { GamePickContainer } from "./style";
+import PickBox from "@Component/Game/PickBox";
+import { GameMode, GamePickCode } from "@utils/constants";
 
 interface Props {
   gameMode: number;
@@ -22,7 +22,7 @@ const GamePick: React.FC<Props> = ({ gameMode, setUserPick }) => {
   const GameSelect =
     gameMode === GameMode.RPS ? RPSGameSelect : RPSLSGameSelect;
   return (
-    <GamePickContainer>
+    <GamePickContainer gameMode={gameMode}>
       {GameSelect.map((pick, idx) => (
         <PickBox pick={pick} setUserPick={setUserPick} key={idx} />
       ))}
