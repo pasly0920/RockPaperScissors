@@ -1,14 +1,18 @@
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
-import GameResult from '@Component/Game/GameResult';
-import GamePick from '@Component/Game/GamePick';
-import ScoreBoard from '@Component/Game/ScoreBoard';
-import { GamePickCode, GameMode } from '@utils/constants';
-import getRandomInt from '@utils/getRandomInt';
-import getResult from '@utils/getResult';
+import GameResult from "@Component/Game/GameResult";
+import GamePick from "@Component/Game/GamePick";
+import ScoreBoard from "@Component/Game/ScoreBoard";
+import { GamePickCode, GameMode, Device } from "@utils/constants";
+import getRandomInt from "@utils/getRandomInt";
+import getResult from "@utils/getResult";
 
 const RockPaperScissors = styled.div`
+  @media ${Device.Mobile} {
+    width: 100%;
+  }
+
   width: 70%;
   margin: 3% auto;
 `;
