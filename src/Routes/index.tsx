@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { GamePage } from '../Page';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GamePage } from "../Page";
 
 const Router: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path='/' element={<GamePage />} />
+        <Route path="/" element={<GamePage />} />
       </Routes>
     </BrowserRouter>
   );
