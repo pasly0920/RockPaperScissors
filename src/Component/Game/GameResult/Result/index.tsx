@@ -1,6 +1,7 @@
 import { GameResultCode } from "@utils/constants";
 import {
   ResultTextContainer,
+  ResultTextFlex,
   ResultText,
   AgainContainer,
   AgainText,
@@ -26,7 +27,10 @@ const Result: React.FC<Props> = ({ result, resetPick }) => {
     case GameResultCode.LOSE:
       return (
         <ResultTextContainer>
-          <ResultText>You Lose</ResultText>
+          <ResultTextFlex>
+            <ResultText>You</ResultText>
+            <ResultText>Lose</ResultText>
+          </ResultTextFlex>
           <AgainContainer onClick={resetPick}>
             <AgainText>Play Again</AgainText>
           </AgainContainer>
@@ -35,7 +39,10 @@ const Result: React.FC<Props> = ({ result, resetPick }) => {
     case GameResultCode.WIN:
       return (
         <ResultTextContainer>
-          <ResultText>You Win</ResultText>
+          <ResultTextFlex>
+            <ResultText>You</ResultText>
+            <ResultText>Win</ResultText>
+          </ResultTextFlex>
           <AgainContainer onClick={resetPick}>
             <AgainText>Play Again</AgainText>
           </AgainContainer>

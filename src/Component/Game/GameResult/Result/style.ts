@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FontSize, ColorCode } from "@utils/constants";
+import { FontSize, ColorCode, Device } from "@utils/constants";
 
 export const ResultTextContainer = styled.div`
   width: 30%;
@@ -8,6 +8,17 @@ export const ResultTextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const ResultTextFlex = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  @media ${Device.Mobile} {
+    flex-direction: column;
+  }
+  flex-direction: row;
 `;
 
 export const ResultText = styled.span`
