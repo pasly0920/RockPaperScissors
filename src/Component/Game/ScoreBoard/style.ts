@@ -1,12 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { ReactComponent as LogoIcon } from '@assets/images/logo.svg';
-import { ReactComponent as SpecialLogoIcon } from '@assets/images/logo-bonus.svg';
-import { ColorCode, FontSize } from '@utils/constants';
+import { ReactComponent as LogoIcon } from "@assets/images/logo.svg";
+import { ReactComponent as SpecialLogoIcon } from "@assets/images/logo-bonus.svg";
+import { ColorCode, FontSize, Device } from "@utils/constants";
 
 export const ScoreContainer = styled.div`
   width: 100%;
   background-color: transparent;
+  margin-top: 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,6 +17,9 @@ export const ScoreContainer = styled.div`
 `;
 
 export const Score = styled.div`
+  @media ${Device.Mobile} {
+    width: 25%;
+  }
   width: 20%;
   margin: 2.5%;
   background-color: ${ColorCode.WHITE};
@@ -46,11 +50,19 @@ export const ScoreText = styled.span`
 `;
 
 export const StyledLogo = styled(LogoIcon)`
+  @media ${Device.Mobile} {
+    margin-top: 4%;
+    margin-bottom: 3%;
+  }
   margin-left: 3%;
   cursor: pointer;
 `;
 
 export const StyledSpecialLogo = styled(SpecialLogoIcon)`
+  @media ${Device.Mobile} {
+    margin-top: 4%;
+    margin-bottom: 3%;
+  }
   margin-left: 3%;
   cursor: pointer;
 `;
