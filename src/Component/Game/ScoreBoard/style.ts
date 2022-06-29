@@ -7,7 +7,9 @@ import { ColorCode, FontSize, Device } from "@utils/constants";
 export const ScoreContainer = styled.div`
   width: 100%;
   background-color: transparent;
-  margin-top: 5%;
+  @media ${Device.Mobile} {
+    margin-top: 5%;
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-between;

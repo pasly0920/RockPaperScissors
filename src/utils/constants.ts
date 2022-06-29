@@ -49,7 +49,7 @@ const Size = {
   mobile: "480px",
   tablet: "768px",
   labtop: "1200px",
-  desktop: "1800px",
+  desktop: "1550px",
 };
 
 const Device = {

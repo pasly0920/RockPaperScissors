@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { ColorCode, GamePickCode } from '@utils/constants';
+import { ColorCode, GameMode, GamePickCode } from "@utils/constants";
 
 const handlePickEdgeColor = (pick: number) => {
   switch (pick) {
@@ -24,6 +24,7 @@ export const Pick = styled.div<{ pick: number }>`
     justify-content: center;
     align-items: center;
     width: 21%;
+
     border-radius: 50%;
     border: 25px solid transparent;
     background-image: linear-gradient(#fff, #fff),
@@ -34,7 +35,7 @@ export const Pick = styled.div<{ pick: number }>`
     background-clip: content-box, border-box;
   }
   &:after {
-    content: '';
+    content: "";
     display: block;
     padding-bottom: 100%;
   }
