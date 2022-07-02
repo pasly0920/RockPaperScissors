@@ -13,7 +13,6 @@ interface Props {
 }
 
 const Result: React.FC<Props> = ({ result, resetPick }) => {
-  console.log(result);
   switch (result) {
     case GameResultCode.DRAW:
       return (
