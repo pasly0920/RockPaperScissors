@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import PickBox from '@Component/Game/PickBox';
-import Result from './Result';
-import { GameResultContainer } from './style';
-import { GameResultCode } from '@utils/constants';
-import getResult from '@utils/getResult';
-
+import PickBox from "@Component/Game/PickBox";
+import Result from "./Result";
+import { GameResultContainer } from "./style";
+import { GameResultCode } from "@utils/constants";
+import getResult from "@utils/getResult";
 
 interface Props {
   userPick: number;
@@ -21,7 +20,6 @@ const GameResult: React.FC<Props> = ({
   resetPick,
 }) => {
   const [result, setResult] = useState<number>(GameResultCode.DEFAULT);
-
   useEffect(() => {
     setResult(getResult(userPick, housePick, gameMode));
   }, [userPick, housePick, gameMode]);
@@ -29,7 +27,9 @@ const GameResult: React.FC<Props> = ({
   return (
     <GameResultContainer>
       <PickBox pick={userPick} setUserPick={null} />
-      {result === GameResultCode.DEFAULT ? '' : <Result result={result} resetPick={resetPick}/>}
+      {result !== GameResultCode.DEFAULT && (
+        <Result result={result} resetPick={resetPick} />
+      )}
       <PickBox pick={housePick} setUserPick={null} />
     </GameResultContainer>
   );

@@ -1,5 +1,5 @@
-import { Pick } from './style';
-import useGetPickSvg from '@hooks/useGetPickSVG';
+import { Pick } from "./style";
+import useGetPickSvg from "@hooks/useGetPickSVG";
 
 interface Props {
   pick: number;

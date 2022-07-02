@@ -12,7 +12,6 @@ const RockPaperScissors = styled.div`
   @media ${Device.Mobile} {
     width: 100%;
   }
-
   width: 70%;
   margin: 3% auto;
 `;
